@@ -1,0 +1,119 @@
+@use '../variables' as *;
+
+.hero {
+  position: relative;
+  overflow: hidden;
+
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba($color-bg, 0.95) 10%,
+      rgba($color-bg, 0.7) 20%,
+      rgba($color-bg, 0.3) 40%,
+      rgba($color-bg, 0.3) 55%,
+      rgba($color-bg, 0.3) 70%,
+      rgba($color-bg, 0.6) 85%,
+      rgba($color-bg, 0.9) 100%
+    ),
+    url('/src/assets/bg3.webp');
+
+  background-position: center 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 55vh;
+  padding-top: calc(#{$header-h} + #{$sp-3});
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: rgba(0, 0, 0, 0.35);
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title span {
+    color: $color-accent;
+  }
+
+  &__container {
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $sp-6;
+  }
+
+  &__title {
+    font-size: $fs-h1;
+    line-height: 1.1;
+    // margin-bottom: $sp-6;
+  }
+
+  &__subtitle {
+    display: block;
+    // margin-top: $sp-4;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 0.22em;
+    color: $color-muted;
+  }
+
+  &__lead {
+    max-width: 34ch;
+    // margin: $sp-3 0 $sp-4;
+    color: $color-muted;
+    font-size: $fs-body;
+    line-height: $lh-base;
+  }
+
+  &__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $sp-3;
+    margin: 0 0 $sp-6;
+    padding: 0;
+    list-style: none;
+
+    li {
+      border: 1px solid rgba(245, 245, 245, 0.18);
+      color: $color-muted;
+      padding: $sp-2 $sp-3;
+      border-radius: 999px;
+      font-size: 14px;
+      letter-spacing: 0.04em;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $sp-5;
+  }
+
+  &__button {
+    @include button-base;
+    @include button-outline;
+  }
+
+  &__link {
+    color: $color-muted-2;
+    border-bottom: 1px dashed rgba(245, 245, 245, 0.35);
+
+    &:hover {
+      color: $color-text;
+      border-color: rgba(245, 245, 245, 0.55);
+    }
+  }
+}

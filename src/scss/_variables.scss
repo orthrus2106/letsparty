@@ -1,0 +1,105 @@
+$color-accent: #ec8a39;
+$color-bg: #0d0d0d;
+$color-surface: rgba(255, 255, 255, 0.04);
+$color-surface-2: rgba(255, 255, 255, 0.06);
+$color-border: rgba(255, 255, 255, 0.12);
+$color-neon: #724eee;
+
+$color-text: #f5f5f5eb;
+$color-muted: #f5f5f5c7;
+$color-muted-2: rgba(245, 245, 245, 0.6);
+
+$color-accent-soft: rgba(236, 138, 57, 0.1);
+$color-accent-border: rgba(236, 138, 57, 0.35);
+
+$wa: #25d366;
+$ig: #e1306c;
+
+$font-main: 'Montserrat', sans-serif;
+
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+$fw-black: 900;
+
+$lh-tight: 1.05;
+$lh-snug: 1.2;
+$lh-base: 1.5;
+
+$ls-title: 0.06em; // для UPPERCASE заголовков
+$ls-kicker: 0.14em;
+
+$fs-body: 16px;
+$fs-small: 12px;
+$fs-xs: 10px;
+
+$fs-h1: clamp(32px, 5.5vw, 56px);
+$fs-h2: clamp(24px, 4vw, 36px);
+$fs-h3: 20px;
+
+$sp-1: 4px;
+$sp-2: 8px;
+$sp-3: 12px;
+$sp-4: 16px;
+$sp-5: 24px;
+$sp-6: 32px;
+$sp-7: 48px;
+$sp-8: 64px;
+$sp-9: 80px;
+
+$r-1: 10px;
+$r-2: 14px;
+$r-3: 16px;
+
+$shadow-accent: 0 0 20px rgba(236, 138, 57, 0.35);
+
+$tablet: 768px;
+$desktop: 1200px;
+
+$container-max-width: 1140px;
+$container-gutter: 16px;
+
+$header-h: 65px;
+
+$transition: 0.3s ease;
+
+@mixin section {
+  padding-block: $sp-6;
+}
+
+@mixin kicker {
+  font-size: $fs-small;
+  letter-spacing: $ls-kicker;
+  text-transform: uppercase;
+  opacity: 0.6;
+  font-weight: 300;
+  margin-bottom: $sp-2;
+}
+
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $sp-2;
+  padding: $sp-4 $sp-6;
+  font-weight: $fw-bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition:
+    background-color $transition,
+    color $transition,
+    box-shadow $transition,
+    transform 0.15s ease;
+}
+
+@mixin button-outline {
+  border: 1px solid $color-accent;
+  color: $color-text;
+
+  &:hover {
+    background-color: $color-accent;
+    color: $color-bg;
+    box-shadow: $shadow-accent;
+  }
+}

@@ -1,0 +1,199 @@
+backend:
+  name: git-gateway
+  branch: main # Твоя рабочая ветка
+
+# Где физически лежат картинки в репозитории
+media_folder: 'public/gallery'
+# Какой путь будет записываться в JSON
+public_folder: '/gallery'
+
+collections:
+  - name: 'content'
+    label: 'Контент (Локализация)'
+    files:
+      - file: 'public/content/ru.json'
+        label: 'Русская версия'
+        name: 'ru'
+        fields: &fields
+          - {
+              label: 'Описания форматов (Аккордеоны)',
+              name: 'formats',
+              widget: 'object',
+              fields:
+                [
+                  {
+                    label: 'Party Mafia',
+                    name: 'party_mafia',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Заголовок', name: 'title', widget: 'string' },
+                        {
+                          label: 'Описание',
+                          name: 'description',
+                          widget: 'text',
+                        },
+                      ],
+                  },
+                  {
+                    label: 'Bunker Immersive',
+                    name: 'bunker_immersive',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Заголовок', name: 'title', widget: 'string' },
+                        {
+                          label: 'Описание',
+                          name: 'description',
+                          widget: 'text',
+                        },
+                      ],
+                  },
+                  {
+                    label: 'Classic Mafia',
+                    name: 'classic_mafia',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Заголовок', name: 'title', widget: 'string' },
+                        {
+                          label: 'Описание',
+                          name: 'description',
+                          widget: 'text',
+                        },
+                      ],
+                  },
+                  {
+                    label: 'Bunker Classic',
+                    name: 'bunker',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Заголовок', name: 'title', widget: 'string' },
+                        {
+                          label: 'Описание',
+                          name: 'description',
+                          widget: 'text',
+                        },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: 'FAQ',
+              name: 'faq',
+              widget: 'list',
+              fields:
+                [
+                  { label: 'Вопрос', name: 'question', widget: 'string' },
+                  { label: 'Ответ', name: 'answer', widget: 'text' },
+                ],
+            }
+          - {
+              label: 'Отзывы',
+              name: 'reviews',
+              widget: 'list',
+              fields:
+                [
+                  {
+                    label: 'Текст (выделяй **жирным**)',
+                    name: 'text',
+                    widget: 'markdown',
+                    buttons: ['bold'],
+                    editor_components: [],
+                  },
+                  {
+                    label: 'Скриншот (из папки proofs)',
+                    name: 'image',
+                    widget: 'image',
+                    choose_url: false,
+                  },
+                  { label: 'Alt текст', name: 'image_alt', widget: 'string' },
+                ],
+            }
+      - file: 'public/content/en.json'
+        label: 'English Version'
+        name: 'en'
+        fields: *fields
+      - file: 'public/content/lv.json'
+        label: 'Latviešu versija'
+        name: 'lv'
+        fields: *fields
+  - name: 'settings'
+    label: 'Общие настройки'
+    files:
+      - file: 'public/content/contacts.json'
+        label: 'Контакты'
+        name: 'contacts'
+        fields:
+          - { label: 'Телефон (текст)', name: 'phone_text', widget: 'string' }
+          - {
+              label: 'Ссылка на телефон (tel:)',
+              name: 'phone_tel_url',
+              widget: 'string',
+            }
+          - { label: 'Ссылка WhatsApp', name: 'whatsapp_url', widget: 'string' }
+          - {
+              label: 'Instagram (текст)',
+              name: 'instagram_text',
+              widget: 'string',
+            }
+          - {
+              label: 'Ссылка Instagram',
+              name: 'instagram_url',
+              widget: 'string',
+            }
+      - file: 'public/content/gallery.json'
+        label: 'Галерея'
+        name: 'gallery'
+        fields:
+          - {
+              label: 'Галерея',
+              name: 'gallery',
+              widget: 'list',
+              fields:
+                [
+                  { label: 'Фото', name: 'image', widget: 'image' },
+                  { label: 'Подпись', name: 'caption', widget: 'string' },
+                ],
+            }
+      - file: 'public/content/prices.json'
+        label: 'Цены'
+        name: 'prices'
+        fields:
+          - {
+              label: 'Цены (только цифры)',
+              name: 'prices',
+              widget: 'object',
+              fields:
+                [
+                  {
+                    label: 'Party Mafia',
+                    name: 'party_mafia',
+                    widget: 'number',
+                    value_type: 'int',
+                    min: 0,
+                  },
+                  {
+                    label: 'Bunker Immersive',
+                    name: 'bunker_immersive',
+                    widget: 'number',
+                    value_type: 'int',
+                    min: 0,
+                  },
+                  {
+                    label: 'Classic Mafia',
+                    name: 'classic_mafia',
+                    widget: 'number',
+                    value_type: 'int',
+                    min: 0,
+                  },
+                  {
+                    label: 'Bunker',
+                    name: 'bunker',
+                    widget: 'number',
+                    value_type: 'int',
+                    min: 0,
+                  },
+                ],
+            }

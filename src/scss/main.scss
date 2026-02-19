@@ -1,0 +1,20 @@
+@use 'fonts';
+@use 'variables' as *;
+@use 'reset';
+@use 'base';
+
+// Components
+
+@use 'components/header';
+@use 'components/hero';
+@use 'components/formats';
+@use 'components/why';
+@use 'components/details';
+@use 'components/gallery';
+@use 'components/guide';
+@use 'components/about';
+@use 'components/reviews';
+@use 'components/prices';
+@use 'components/faq';
+@use 'components/contacts';
+@use 'components/footer';

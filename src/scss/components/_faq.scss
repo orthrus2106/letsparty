@@ -1,0 +1,109 @@
+@use '../variables' as *;
+
+.faq {
+  @include section;
+
+  &__title {
+    margin-bottom: $sp-5;
+  }
+  &__label {
+    @include kicker;
+  }
+}
+
+.acc-faq {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0;
+
+  &[open] {
+    border-bottom-color: rgba(236, 138, 57, 0.22);
+  }
+
+  &__summary {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: $sp-4;
+
+    padding: $sp-4 0;
+    cursor: pointer;
+
+    font-size: $fs-body;
+    font-weight: $fw-medium;
+    color: $color-text;
+
+    background: transparent;
+    border: 0;
+    list-style: none;
+
+    -webkit-tap-highlight-color: transparent;
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(236, 138, 57, 0.28);
+      border-radius: 10px;
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  &__icon {
+    flex: 0 0 auto;
+    width: 28px;
+    height: 28px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: transparent;
+
+    color: $color-muted;
+
+    transition:
+      transform $transition,
+      border-color $transition,
+      color $transition;
+  }
+
+  &[open] &__icon {
+    transform: rotate(45deg);
+    color: $color-accent;
+    border-color: rgba(236, 138, 57, 0.35);
+  }
+
+  &__panel {
+    opacity: 0;
+    transform: translateY(-4px);
+
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  &[open] &__panel {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__content {
+    padding: 0 0 $sp-4;
+    color: $color-muted;
+    line-height: 1.6;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .acc-faq__panel {
+    transition: none;
+    transform: none;
+  }
+}

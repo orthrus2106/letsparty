@@ -1,0 +1,89 @@
+@use '../variables' as *;
+
+.prices {
+  position: relative;
+  overflow: hidden;
+  @include section;
+
+  &__label {
+    @include kicker;
+  }
+
+  &__title {
+    margin-bottom: $sp-6;
+  }
+
+  &__note {
+    font-style: italic;
+    opacity: 0.6;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 113px;
+    right: -230px;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+
+    background: radial-gradient(
+      circle,
+      rgba(114, 78, 238, 0.55),
+      0%,
+      rgba(114, 78, 238, 0.25),
+      35%,
+      transparent 65%
+    );
+    filter: blur(140px);
+    z-index: -1;
+  }
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.prices__grid {
+  display: grid;
+  gap: $sp-4;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: $tablet) {
+  .prices__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.price-card {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.04);
+
+  &-title {
+    font-size: $fs-h3;
+  }
+
+  &--featured {
+    position: relative;
+    border-color: rgba($color-accent, 0.45);
+    box-shadow:
+      0 0 0 1px rgba(255, 140, 0, 0.18),
+      0 10px 30px rgba(0, 0, 0, 0.35);
+  }
+}
+
+.price-card__value {
+  font-size: $fs-body;
+  font-weight: 700;
+  margin: 10px 0 6px;
+}
+
+.price-card__btn {
+  display: inline-block;
+  margin-top: $sp-3;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.35);
+}

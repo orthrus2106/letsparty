@@ -1,0 +1,117 @@
+@use 'variables' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: $header-h;
+}
+
+body {
+  margin: 0;
+  background-color: $color-bg;
+  color: $color-text;
+  font-family: $font-main;
+  font-size: $fs-body;
+  line-height: $lh-base;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-main;
+  font-weight: $fw-black;
+  text-transform: uppercase;
+  letter-spacing: $ls-title;
+}
+
+h1 {
+  font-size: $fs-h1;
+  line-height: $lh-tight;
+}
+
+h2 {
+  font-size: $fs-h2;
+  line-height: $lh-snug;
+}
+
+h3 {
+  font-size: $fs-h3;
+  line-height: $lh-snug;
+}
+
+p {
+  color: $color-muted;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition:
+    color $transition,
+    opacity $transition,
+    border-color $transition;
+}
+
+.container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding-inline: $container-gutter;
+}
+
+/* Utilities */
+.section {
+  @include section;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: $sp-4;
+}
+
+.kicker {
+  @include kicker;
+}
+
+.btn {
+  @include button-base;
+}
+
+.btn--outline {
+  @include button-outline;
+}

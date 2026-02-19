@@ -1,0 +1,78 @@
+{
+  "reviews": [
+    {
+      "text": "“I really love your format and how you run the games, **so much laughter 😂 one mother even suggested another host because the price was lower, but Elya, like me, said — no, we want Nastya 😃**”",
+      "image": "/proofs/proof-3.PNG",
+      "image_alt": "Telegram review screenshot"
+    },
+    {
+      "text": "“The game turned out super cool 🔥🔥 Everyone played actively, **even those playing for the first time** 😊 The atmosphere was charged and very lively, especially the character roles were fire, everyone really got into character! 🤣🤣 Thank you so much! 💗 we'll come to your game again 🥰”",
+      "image": "/proofs/proof-8.PNG",
+      "image_alt": "Telegram review screenshot"
+    },
+    {
+      "text": "“We had a corporate event yesterday, couldn't reply right away 🙏 Thank you so much for your work! **Diana is wonderful, we had a lot of fun together. 🥳 Very glad to cooperate with you and it's nice to always have responsible people around ❤️**”",
+      "image": "/proofs/proof-5.PNG",
+      "image_alt": "Telegram review screenshot"
+    },
+    {
+      "text": "“Thank you for welcoming into your warm company those inexperienced ones **who are playing for the first time 🤗☀️**”",
+      "image": "/proofs/proof-13.PNG",
+      "image_alt": "Telegram review screenshot"
+    },
+    {
+      "text": "“Truly **it gets cooler and cooler every time!** Getting into the Mafia role is becoming easier and easier 😂🔥”",
+      "image": "/proofs/proof-11.PNG",
+      "image_alt": "Telegram review screenshot"
+    },
+    {
+      "text": "“Diana, hi! **Thanks for a wonderful, fun evening!** I hope my noisy company didn't cause any problems during the event:)”",
+      "image": "/proofs/proof-14.PNG",
+      "image_alt": "Telegram review screenshot"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How long does the game last?",
+      "answer": "It depends on the number of participants and their mood. We always clarify with clients whether they have prior experience and what their expectations are. Hosts try to adapt to the timing if one has been specified."
+    },
+    {
+      "question": "What is the guest count for a Mafia game?",
+      "answer": "From 6 to 25 players. We discuss this in advance to ensure the best game dynamics."
+    },
+    {
+      "question": "In what languages are the events conducted?",
+      "answer": "In Latvian, English, and Russian. Bilingual events are also possible."
+    },
+    {
+      "question": "How many players can play Bunker?",
+      "answer": "From 5 to 20 players. We discuss the details and dynamics in advance."
+    },
+    {
+      "question": "Are travel expenses included in the price?",
+      "answer": "No, travel expenses are paid separately depending on the location. In Riga, we only charge for parking."
+    },
+    {
+      "question": "Do you run games for children?",
+      "answer": "Yes, starting from 8 years old. If you need programs for younger children, we have partners and can help you organize a kids' party."
+    }
+  ],
+  "formats": {
+    "party_mafia": {
+      "title": "Party Mafia — our headliner",
+      "description": "Party Mafia is a unique format, a fresh take on the familiar \"Mafia\". Not just a game, but a full program for your holiday. Participants are given the opportunity to show their acting skills, reveal themselves from a new side, and snatch victory through their knowledge, agility, reaction, and wit. It's a format with a lot of emotion and dynamics, where guests loosen up and get involved in the process. Suitable for groups that want drive, movement, and vivid memories."
+    },
+    "bunker_immersive": {
+      "title": "Bunker: Immersive Experience",
+      "description": "This format is for those who want maximum immersion in the atmosphere of apocalypse and survival. We take the classic \"Bunker\" as a basis and create a unique gaming experience for your group: with a well-thought-out concept, atmosphere, and details that unfold gradually. Guests know their profession and backstory in advance, and then the game unfolds into a whole story at the location itself. This is a format for those who want to not just play, but live the game!"
+    },
+    "classic_mafia": {
+      "title": "Classic \"Mafia\"",
+      "description": "A strategic, psychological, and intellectual game for calm groups. The perfect format to unobtrusively complement an evening for 1–2 hours: socialize, observe, engage logic, and feel the excitement without extra noise. Suitable for those who love classics, atmosphere, and a steady pace."
+    },
+    "bunker": {
+      "title": "Bunker — classic format",
+      "description": "A survival game where the winner is not the loudest, but the most persuasive. Each player receives a unique character trait, and their main task is to prove why they deserve to enter the bunker and how they can help humanity cope with the impending catastrophe. There's no need to lie here — it's important to argue, think strategically, and read people. The game captivates, unites, and often reveals participants from a completely new side."
+    }
+  }
+}

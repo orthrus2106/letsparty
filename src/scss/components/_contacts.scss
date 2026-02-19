@@ -1,0 +1,187 @@
+@use '../variables' as *;
+
+.contact {
+  @include section;
+  margin-bottom: $sp-6;
+  &__card {
+    position: relative;
+    border-radius: $r-3;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.04);
+    overflow: hidden;
+    padding: $sp-4;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(
+        closest-side,
+        rgba($color-accent, 0.18),
+        transparent 65%
+      );
+      filter: blur(30px);
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__kicker {
+    @include kicker;
+  }
+
+  &__title {
+    margin: 0 0 $sp-3;
+    font-size: $fs-h2;
+    line-height: $lh-snug;
+  }
+
+  &__text {
+    margin: 0 0 $sp-6;
+    color: $color-muted;
+    max-width: 52ch;
+    line-height: $lh-base;
+  }
+
+  &__actions {
+    display: grid;
+    gap: $sp-3;
+  }
+
+  &__note {
+    margin: $sp-5 0 0;
+    color: $color-muted-2;
+    font-size: $fs-small;
+    line-height: $lh-base;
+  }
+}
+
+.cbtn {
+  position: relative;
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  grid-template-rows: auto auto;
+  column-gap: $sp-3;
+  row-gap: 2px;
+
+  padding: $sp-4;
+  border-radius: $r-2;
+  text-decoration: none;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+
+  transition: transform $transition, border-color $transition,
+    background-color $transition;
+
+  &:hover {
+    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($color-accent, 0.35);
+  }
+
+  &__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(0, 0, 0, 0.18);
+
+    grid-row: 1 / span 2;
+    position: relative;
+    overflow: hidden;
+
+    /* glow */
+    &::before {
+      content: '';
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(
+        closest-side,
+        rgba(var(--glow, 255, 255, 255), 0.22),
+        transparent 60%
+      );
+      opacity: 0;
+      filter: blur(10px);
+      transition: opacity $transition;
+      pointer-events: none;
+    }
+
+    &::after {
+      content: '';
+      width: 22px;
+      height: 22px;
+      background: rgba(255, 255, 255, 0.92);
+
+      -webkit-mask: var(--icon) center / contain no-repeat;
+      mask: var(--icon) center / contain no-repeat;
+
+      transition: transform $transition, filter $transition;
+    }
+  }
+
+  &:hover &__icon::before {
+    opacity: 1;
+  }
+
+  &:hover &__icon::after {
+    transform: scale(1.06);
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.35));
+  }
+
+  &__label {
+    font-weight: $fw-semibold;
+    color: $color-text;
+    line-height: $lh-snug;
+  }
+
+  &__meta {
+    font-size: $fs-small;
+    color: $color-muted;
+    line-height: $lh-snug;
+  }
+
+  &--wa {
+    --icon: url('/icons/whatsapp.svg');
+    --glow: 37, 211, 102;
+
+    &:hover .cbtn__icon {
+      border-color: rgba($wa, 0.55);
+      background: rgba($wa, 0.12);
+    }
+  }
+
+  &--ig {
+    --icon: url('/icons/instagram.svg');
+    --glow: 225, 48, 108;
+
+    &:hover .cbtn__icon {
+      border-color: rgba($ig, 0.55);
+      background: rgba($ig, 0.12);
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+  .contact__actions {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact__card {
+    padding: $sp-7;
+  }
+}

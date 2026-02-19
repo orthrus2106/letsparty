@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Organization of atmospheric events and immersive games in Riga. Unique experience, signature Mafia and Bunker formats for private and corporate clients."
+    />
+
+    <meta http-equiv="content-language" content="en" />
+    <title>Let's Party / Dynasty Events</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <a class="header__logo" href="#">
+          <img class="header__image" src="/logo.png" alt="Let's Party" />
+          <p class="header__text">Let's Party</p>
+        </a>
+
+        <!-- DESKTOP NAV  -->
+        <nav class="header__nav nav" aria-label="Navigation">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#formats">Formats</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#extras">Extras</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#reviews">Reviews</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#about">About us</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#faq">FAQ</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#booking">Contacts</a>
+            </li>
+          </ul>
+
+          <div class="lang lang--desktop" aria-label="Language">
+            <a href="/ru/" class="lang__btn" id="lang-ru">RU</a>
+            <a href="/" class="lang__btn" id="lang-lv">LV</a>
+            <a href="/en/" class="lang__btn is-active" id="lang-en">EN</a>
+          </div>
+        </nav>
+
+        <button
+          class="burger"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <!-- MOBILE MENU -->
+      <div class="menu" id="menu" aria-hidden="true">
+        <button
+          class="menu__overlay"
+          type="button"
+          data-menu-close
+          aria-label="Close menu"
+        ></button>
+
+        <nav class="menu__panel" aria-label="Navigation">
+          <div class="lang lang--mobile" aria-label="Language">
+            <a href="/ru/" class="lang__btn">RU</a>
+            <a href="/" class="lang__btn">LV</a>
+            <a href="/en/" class="lang__btn is-active">EN</a>
+          </div>
+
+          <ul class="menu__list">
+            <li><a class="menu__link" href="#formats">Formats</a></li>
+            <li><a class="menu__link" href="#extras">Extras</a></li>
+            <li><a class="menu__link" href="#reviews">Reviews</a></li>
+            <li><a class="menu__link" href="#about">About us</a></li>
+            <li><a class="menu__link" href="#faq">FAQ</a></li>
+            <li><a class="menu__link" href="#booking">Contacts</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <div class="container hero__container">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              LET'S <span>PARTY</span> — <br />
+              <small class="hero__subtitle"
+                >Your party starts with us</small
+              >
+            </h1>
+            <p class="hero__lead">
+              Programs and games for your celebration in Riga. With a host for birthdays, corporate events, and groups of friends from 6 to 50 guests from <strong>60 € / hour</strong>
+            </p>
+
+            <!-- <ul class="hero__chips">
+              <li>RU / LV / EN</li>
+              <li>On-site at your venue</li>
+              <li>Mafia / Bunker</li>
+            </ul> -->
+
+            <div class="hero__actions">
+              <a class="hero__button btn" href="#booking">Reserve your date</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="formats" id="formats">
+  <div class="container">
+    <p class="formats__label">What do we offer?</p>
+    <h2 class="formats__title">Our Formats</h2>
+
+    <div class="formats__grid">
+      <article class="format-card format-card--featured">
+        <div class="format-card__badge format-card__badge--featured">
+          from {{prices.party_mafia}} € / hour
+        </div>
+        <h3 class="format-card__title">Party Mafia</h3>
+        <p class="format-card__hook">A full-scale script for your celebration program starting from 3 hours.</p>
+        <ul class="format-card__list">
+          <li>Unique roles and character personalities</li>
+          <li>Host as a showrunner</li>
+          <li>Maximum guest engagement</li>
+          <li>A game within a game with contests for immunity and survival</li>
+        </ul>
+        <div class="format-card__actions">
+          
+        <a href="#format-author" class="format-card__link" data-acc="format-author">Read more →</a>
+        <a href="#booking" class="format-card__cta">
+  Reserve your date →
+</a>
+        </div>
+      </article>
+
+      <article class="format-card format-card--featured">
+        <div class="format-card__badge format-card__badge--featured">
+          from {{prices.bunker_immersive}} € / hour
+        </div>
+        <h3 class="format-card__title">Bunker: Immersive Experience</h3>
+        <p class="format-card__hook">Dive into the story before the game even begins. A market novelty!</p>
+        <ul class="format-card__list">
+          <li>Classified location</li>
+          <li>Personal roles and participant dossiers</li>
+          <li>Prepared props (luggage)</li>
+          <li>A story where every choice matters</li>
+          <li>A cinematic atmosphere, not just a game</li>
+        </ul>
+        <div class="format-card__actions">
+          <a href="#format-immersive-bunker" class="format-card__link" data-acc="format-immersive-bunker">Read more →</a>
+        <a href="#booking" class="format-card__cta">
+  Reserve your date →
+</a>
+        </div>
+      </article>
+
+      <article class="format-card">
+        <div class="format-card__badge">from {{prices.classic_mafia}} € / hour</div>
+        <h3 class="format-card__title">Classic Mafia</h3>
+        <p class="format-card__hook">A familiar format for any group</p>
+        <ul class="format-card__list">
+          <li>Classic rules</li>
+          <li>For any audience</li>
+          <li>Flexible duration</li>
+          <li>Music accompaniment</li>
+          <li>Professional game accessories</li>
+          <li>Gifts for the best players</li>
+        </ul>
+        <div class="format-card__actions">
+          <a href="#format-classic" class="format-card__link" data-acc="format-classic">Read more →</a>
+          <a href="#booking" class="format-card__cta">
+  Reserve your date →
+</a>
+        </div>
+        
+      </article>
+
+      <article class="format-card">
+        <div class="format-card__badge">from {{prices.bunker}} € / hour</div>
+        <h3 class="format-card__title">Bunker</h3>
+        <p class="format-card__hook">A game of logic and discussion</p>
+        <ul class="format-card__list">
+          <li>Survival storyline</li>
+          <li>Strategy and arguments</li>
+          <li>Team dynamics</li>
+        </ul>
+        <div class="format-card__actions">
+          <a href="#format-bunker" class="format-card__link" data-acc="format-bunker">Read more →</a>
+          <a href="#booking" class="format-card__cta">
+  Reserve your date →
+</a>
+        </div>
+      </article>
+
+      <article class="extras-card" id="extras">
+        <div class="extras-card__head">
+          <p class="extras-card__kicker">Extras</p>
+          <h3 class="extras-card__title">Services by Dynasty Events</h3>
+          <p class="extras-card__text">If you need more than just a game format and want a full turnkey event, we can help.</p>
+        </div>
+        <ul class="extras-card__list">
+          <li class="extras-card-item">Intimate weddings, corporate events, and anniversaries</li>
+          <li class="extras-card-item">Turnkey bachelorette and bachelor parties</li>
+          <li class="extras-card-item">Photographer and videographer</li>
+          <li class="extras-card-item">Mobile shooting + editing <span>(format discussed with the client)</span></li>
+          <li class="extras-card-item">Event decor and styling</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="gallery__media">
+      <div class="gallery__slider swiper" aria-label="Let’s Party Gallery">
+        <div class="swiper-wrapper" id="gallery-wrapper">
+          </div>
+
+        <button class="gallery__nav gallery__nav--prev" type="button" aria-label="Previous photo"></button>
+        <button class="gallery__nav gallery__nav--next" type="button" aria-label="Next photo"></button>
+        
+        <!-- <div class="gallery__pagination swiper-pagination"></div> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="format-details" id="formats-details">
+  <div class="container">
+    <div class="accordion accordion--details" id="formats-accordion">
+      
+      <details class="acc-details acc-trigger" id="format-author">
+        <summary class="acc-details__summary">
+          {{formats.party_mafia.title}}
+          <span class="acc-details__icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="acc-details__panel">
+          <div class="acc-details__content">
+            <p>{{formats.party_mafia.description}}</p>
+            <a href="#booking" class="acc-details__cta">
+  Reserve your date →
+</a>
+          </div>
+        </div>
+      </details>
+
+      <details class="acc-details acc-trigger" id="format-immersive-bunker">
+        <summary class="acc-details__summary">
+          {{formats.bunker_immersive.title}}
+          <span class="acc-details__icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="acc-details__panel">
+          <div class="acc-details__content">
+            <p>{{formats.bunker_immersive.description}}</p>
+            <a href="#booking" class="acc-details__cta">
+  Reserve your date →
+</a>
+          </div>
+        </div>
+      </details>
+
+      <details class="acc-details acc-trigger" id="format-classic">
+        <summary class="acc-details__summary">
+          {{formats.classic_mafia.title}}
+          <span class="acc-details__icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="acc-details__panel">
+          <div class="acc-details__content">
+            <p>{{formats.classic_mafia.description}}</p>
+            <a href="#booking" class="acc-details__cta">
+  Reserve your date →
+</a>
+          </div>
+        </div>
+      </details>
+
+      <details class="acc-details acc-trigger" id="format-bunker">
+        <summary class="acc-details__summary">
+          {{formats.bunker.title}}
+          <span class="acc-details__icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="acc-details__panel">
+          <div class="acc-details__content">
+            <p>{{formats.bunker.description}}</p>
+            <a href="#booking" class="acc-details__cta">
+  Reserve your date →
+</a>
+          </div>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<section class="guide" id="guide">
+  <div class="container">
+    <p class="guide__label">How does collaboration work?</p>
+    <h2 class="guide__title">A simple and clear process from inquiry to a memorable evening</h2>
+
+    <ul class="guide__list">
+      <li class="guide__item">
+        <span class="guide__marker"></span>
+        <div class="guide__content">
+          <h3 class="guide__heading">Step 01</h3>
+          <p class="guide__text">
+            You leave a request in any way convenient for you
+          </p>
+        </div>
+      </li>
+
+      <li class="guide__item">
+        <span class="guide__marker"></span>
+        <div class="guide__content">
+          <h3 class="guide__heading">Step 02</h3>
+          <p class="guide__text">
+            We ask 3–5 clarifying questions to understand the scope and goals of your event.
+          </p>
+        </div>
+      </li>
+
+      <li class="guide__item">
+        <span class="guide__marker"></span>
+        <div class="guide__content">
+          <h3 class="guide__heading">Step 03</h3>
+          <p class="guide__text">
+            We select the best game and interactive format specifically for your group.
+          </p>
+        </div>
+      </li>
+
+      <li class="guide__item">
+        <span class="guide__marker"></span>
+        <div class="guide__content">
+          <h3 class="guide__heading">Step 04</h3>
+          <p class="guide__text">
+            We prepare a personalized scenario and align all technical details.
+          </p>
+        </div>
+      </li>
+
+      <li class="guide__item">
+        <span class="guide__marker"></span>
+        <div class="guide__content">
+          <h3 class="guide__heading">Step 05</h3>
+          <p class="guide__text">
+            We run the game, engage the guests, and create that special festive atmosphere.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+      <section class="why" id="why">
+  <div class="container">
+    <p class="why__label">Why choose us?</p>
+    <h2 class="why__title">
+      We create experiences,<br />
+      not just games
+    </h2>
+
+    <div class="why__items">
+      <article class="why-item">
+        <h3 class="why-item__title">Producer mindset</h3>
+        <p class="why-item__text">
+          We do not work from templates.
+Each format is tailored to the group, the mood, and the goal of the event.
+
+We ask guiding questions and value your context, so we can design unique details specifically for your company. 
+        </p>
+      </article>
+
+      <article class="why-item">
+        <h3 class="why-item__title">Lively and gentle engagement</h3>
+        <p class="why-item__text">
+          We know how to build momentum without pressure. We never force anyone to participate.
+
+Active guests get room to play, and calmer guests feel comfortable and join naturally.
+        </p>
+      </article>
+
+      <article class="why-item">
+        <h3 class="why-item__title">Sense of room and atmosphere</h3>
+        <p class="why-item__text">
+          We carefully read the group’s mood and manage the evening’s pace so it never drops or becomes tiring.
+
+The game unfolds naturally, and the atmosphere stays warm and alive.
+        </p>
+      </article>
+
+      <article class="why-item">
+        <h3 class="why-item__title">Multilingual format</h3>
+        <p class="why-item__text">
+          We host events in Russian, Latvian, and English, including bilingual formats,
+
+so every guest feels included and stays part of the experience.
+        </p>
+      </article>
+
+      <article class="why-item">
+        <h3 class="why-item__title">Flexibility and comfort</h3>
+        <p class="why-item__text">
+          We adapt the format to people, not people to the format.
+
+We consider timing, venue, and guest mix to make the evening convenient and coherent for everyone.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+      <section class="reviews" id="reviews">
+        <div class="container">
+          <p class="reviews__label">What do people say about us?</p>
+          <h2 class="reviews__title">Client reviews</h2>
+
+          <div class="reviews__track" aria-label="Reviews">
+  {{reviews_items}}
+</div>
+        </div>
+
+        <dialog class="proof" id="proof">
+          <div class="proof__box" role="document">
+            <button
+              class="proof__close"
+              type="button"
+              data-proof-close
+              aria-label="Close"
+            >
+              ✕
+            </button>
+
+            <figure class="proof__figure">
+              <img class="proof__img" src="" alt="" />
+              <figcaption class="proof__cap">Original review</figcaption>
+            </figure>
+          </div>
+
+          <form method="dialog" class="proof__backdrop">
+            <button aria-label="Close"></button>
+          </form>
+        </dialog>
+      </section>
+
+            <section class="about" id="about">
+        <div class="container">
+          <div class="about__grid">
+            <div class="about__text">
+              <p class="about__kicker">Who we are</p>
+
+              <h2 class="about__title">We don’t just run games — we create experiences</h2>
+
+              <div class="about__body">
+                <p>
+                  <strong>Let’s Party</strong> is a project created from friendship, energy, and love for vibrant celebrations.
+                </p>
+
+                <p>
+                  We are Anastasia and Diana, two friends who have been at the center of events since childhood: drama club, school holidays, scripts, and parties for friends, simply because we truly loved it.
+                </p>
+
+                <p>
+                  Back in eighth grade, after staging a play, we came up with the name <strong>Dynasty</strong>, combining our names and our dream of building something of our own. In 2025, that dream became a real event production company, <strong>Dynasty Events</strong>. We decided to start with the Let’s Party project.
+                </p>
+
+                <p>
+                  <strong>Anastasia</strong> is a co-founder of the project and a host since 2022, with more than 500 events behind her. For her, it is not about just “running the format” but creating the exact atmosphere your group needs.
+                </p>
+
+                <p>
+                  <strong>Diana</strong> is a co-founder with entrepreneurial experience since 2020. She easily connects with any person, can energize a room, align details, and create a comfortable, lively atmosphere.
+                </p>
+
+                <p class="about__note">
+                  We share the same vibe, energy, and attitude to work, and that is exactly what makes our team cohesive.
+                </p>
+              </div>
+            </div>
+
+            <div class="about__media">
+ <img src="/src/assets/about.jpg" alt="">
+</div>
+      </section>
+
+            <section class="faq" id="faq">
+        <div class="container">
+          <p class="faq__label">Frequently Asked Questions</p>
+          <h2 class="faq__title">FAQ</h2>
+
+<div class="accordion accordion--faq" id="faq-accordion">
+      {{faq_items}}
+    </div>
+        </div>
+      </section>
+
+      <section class="contact" id="booking">
+        <div class="container">
+          <div class="contact__card">
+            <p class="contact__kicker">Contact</p>
+
+            <h2 class="contact__title">Discuss your event format</h2>
+
+            <p class="contact__text">
+              Message us where it is most convenient for you. We will respond quickly and clarify the details.
+            </p>
+
+            <div class="contact__actions">
+              <a
+                class="cbtn cbtn--wa"
+                href="{{contacts.whatsapp_url}}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="cbtn__icon" aria-hidden="true"></span>
+                <span class="cbtn__label">WhatsApp</span>
+                <span class="cbtn__meta">{{contacts.phone_text}}</span>
+              </a>
+
+              <a
+                class="cbtn cbtn--ig"
+                href="{{contacts.instagram_url}}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="cbtn__icon" aria-hidden="true"></span>
+                <span class="cbtn__label">Instagram</span>
+                <span class="cbtn__meta">{{contacts.instagram_text}}</span>
+              </a>
+            </div>
+
+            <p class="contact__note">* Travel and commute are charged separately.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <p class="footer__name">Let’s Party</p>
+          <p class="footer__meta">Let's Party - Produced by Dynasty Events</p>
+          <a class="footer__meta" href="{{contacts.phone_tel_url}}">{{contacts.phone_text}}</a>
+          <a class="footer__meta" href="{{contacts.instagram_url}}">{{contacts.instagram_text}}</a>
+        </div>
+
+        <div class="footer__links" aria-label="Contacts">
+          <a
+            class="footer__link"
+            href="{{contacts.instagram_url}}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
+          <a
+            class="footer__link"
+            href="{{contacts.whatsapp_url}}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp
+          </a>
+        </div>
+
+        <p class="footer__copy">
+          © <span id="year"></span> Let’s Party. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
