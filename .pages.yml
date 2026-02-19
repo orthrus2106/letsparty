@@ -1,12 +1,6 @@
 media:
-  - name: gallery
-    label: Gallery
-    input: public/gallery
-    output: /gallery
-  - name: proofs
-    label: Proofs
-    input: public/proofs
-    output: /proofs
+  input: public
+  output: /
 
 content:
   - name: ru
@@ -84,7 +78,7 @@ content:
             label: Скриншот (из папки proofs)
             type: image
             options:
-              media: proofs
+              path: proofs
 
   - name: en
     label: English Version
@@ -137,7 +131,7 @@ content:
             label: Фото
             type: image
             options:
-              media: gallery
+              path: gallery
           - name: caption
             label: Подпись
             type: string
