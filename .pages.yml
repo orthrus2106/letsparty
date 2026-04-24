@@ -143,7 +143,7 @@ content:
             type: string
 
   - name: announcements_ru
-    label: Анонсы мероприятий
+    label: Анонсы (RU)
     type: file
     path: public/content/announcements.ru.json
     format: json
@@ -169,7 +169,7 @@ content:
             type: text
 
   - name: announcements_lv
-    label: Pasākumu afiša
+    label: Анонсы (LV)
     type: file
     path: public/content/announcements.lv.json
     format: json
@@ -195,7 +195,7 @@ content:
             type: text
 
   - name: announcements_en
-    label: Event announcements
+    label: Анонсы (EN)
     type: file
     path: public/content/announcements.en.json
     format: json
