@@ -116,6 +116,35 @@
         </div>
       </section>
 
+      <section
+        class="announcements"
+        id="announcements"
+        data-announcements
+        data-announcements-src="/content/announcements.lv.json"
+        data-locale="lv-LV"
+        data-image-alt="Let’s Party pasākuma afiša"
+        hidden
+      >
+        <div class="container">
+          <div class="announcements__head">
+            <div>
+              <p class="announcements__label">Tuvākās tikšanās</p>
+              <h2 class="announcements__title">Pasākumu afiša</h2>
+            </div>
+
+            <div class="announcements__controls" aria-label="Afišas navigācija">
+              <button class="announcements__nav announcements__nav--prev" type="button" aria-label="Iepriekšējais pasākums"></button>
+              <button class="announcements__nav announcements__nav--next" type="button" aria-label="Nākamais pasākums"></button>
+            </div>
+          </div>
+
+          <div class="announcements__slider swiper" aria-label="Tuvākie pasākumi">
+            <div class="announcements__wrapper swiper-wrapper"></div>
+            <div class="announcements__pagination swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
       <section class="formats" id="formats">
   <div class="container">
     <p class="formats__label">Ko mēs piedāvājam?</p>

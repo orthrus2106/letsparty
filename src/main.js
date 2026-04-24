@@ -188,20 +188,25 @@ function markPortraitImages(root) {
   });
 }
 
-function getLocalizedDate(dateValue) {
+function getLocalizedDate(dateValue, locale = 'ru-RU') {
   if (!dateValue) return '';
 
-  const date = new Date(dateValue);
+  const dateParts = dateValue.split('-').map(Number);
+  const date =
+    dateParts.length === 3
+      ? new Date(dateParts[0], dateParts[1] - 1, dateParts[2])
+      : new Date(dateValue);
+
   if (Number.isNaN(date.getTime())) return dateValue;
 
-  return new Intl.DateTimeFormat('ru-RU', {
+  return new Intl.DateTimeFormat(locale, {
     day: 'numeric',
     month: 'long',
     year: 'numeric',
   }).format(date);
 }
 
-function createAnnouncementSlide(item) {
+function createAnnouncementSlide(item, options = {}) {
   const slide = document.createElement('div');
   slide.className = 'swiper-slide';
 
@@ -214,7 +219,7 @@ function createAnnouncementSlide(item) {
   const image = document.createElement('img');
   image.className = 'announcement-card__img';
   image.src = item.image;
-  image.alt = 'Анонс мероприятия Let’s Party';
+  image.alt = options.imageAlt || 'Let’s Party event announcement';
   image.loading = 'lazy';
   image.decoding = 'async';
   media.append(image);
@@ -225,7 +230,7 @@ function createAnnouncementSlide(item) {
   const date = document.createElement('time');
   date.className = 'announcement-card__date';
   date.dateTime = item.date || '';
-  date.textContent = getLocalizedDate(item.date);
+  date.textContent = getLocalizedDate(item.date, options.locale);
 
   const title = document.createElement('h3');
   title.className = 'announcement-card__title';
@@ -249,6 +254,8 @@ async function initAnnouncements() {
   const sliderEl = qs(SELECTORS.announcementsSlider, section);
   const wrapper = qs(SELECTORS.announcementsWrapper, section);
   const contentPath = section.dataset.announcementsSrc;
+  const locale = section.dataset.locale || document.documentElement.lang;
+  const imageAlt = section.dataset.imageAlt;
 
   if (!sliderEl || !wrapper || !contentPath) return;
 
@@ -267,7 +274,11 @@ async function initAnnouncements() {
 
     if (!announcements.length) return;
 
-    wrapper.replaceChildren(...announcements.map(createAnnouncementSlide));
+    wrapper.replaceChildren(
+      ...announcements.map((item) =>
+        createAnnouncementSlide(item, { locale, imageAlt }),
+      ),
+    );
     section.hidden = false;
 
     new Swiper(sliderEl, {

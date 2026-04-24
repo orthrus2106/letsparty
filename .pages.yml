@@ -168,6 +168,58 @@ content:
             label: Краткое описание
             type: text
 
+  - name: announcements_lv
+    label: Pasākumu afiša
+    type: file
+    path: public/content/announcements.lv.json
+    format: json
+    fields:
+      - name: announcements
+        label: Tuvākie pasākumi
+        type: object
+        list: true
+        fields:
+          - name: date
+            label: Datums
+            type: date
+          - name: image
+            label: Foto
+            type: image
+            options:
+              media: gallery
+          - name: title
+            label: Virsraksts
+            type: string
+          - name: description
+            label: Īss apraksts
+            type: text
+
+  - name: announcements_en
+    label: Event announcements
+    type: file
+    path: public/content/announcements.en.json
+    format: json
+    fields:
+      - name: announcements
+        label: Upcoming events
+        type: object
+        list: true
+        fields:
+          - name: date
+            label: Date
+            type: date
+          - name: image
+            label: Photo
+            type: image
+            options:
+              media: gallery
+          - name: title
+            label: Title
+            type: string
+          - name: description
+            label: Short description
+            type: text
+
   - name: prices
     label: Цены
     type: file

@@ -116,6 +116,35 @@
         </div>
       </section>
 
+      <section
+        class="announcements"
+        id="announcements"
+        data-announcements
+        data-announcements-src="/content/announcements.en.json"
+        data-locale="en-US"
+        data-image-alt="Let’s Party event announcement"
+        hidden
+      >
+        <div class="container">
+          <div class="announcements__head">
+            <div>
+              <p class="announcements__label">Upcoming dates</p>
+              <h2 class="announcements__title">Event announcements</h2>
+            </div>
+
+            <div class="announcements__controls" aria-label="Announcement navigation">
+              <button class="announcements__nav announcements__nav--prev" type="button" aria-label="Previous event"></button>
+              <button class="announcements__nav announcements__nav--next" type="button" aria-label="Next event"></button>
+            </div>
+          </div>
+
+          <div class="announcements__slider swiper" aria-label="Upcoming events">
+            <div class="announcements__wrapper swiper-wrapper"></div>
+            <div class="announcements__pagination swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
       <section class="formats" id="formats">
   <div class="container">
     <p class="formats__label">What do we offer?</p>
