@@ -175,23 +175,23 @@ content:
     format: json
     fields:
       - name: announcements
-        label: Tuvākie pasākumi
+        label: Ближайшие мероприятия
         type: object
         list: true
         fields:
           - name: date
-            label: Datums
+            label: Дата
             type: date
           - name: image
-            label: Foto
+            label: Фото
             type: image
             options:
               media: gallery
           - name: title
-            label: Virsraksts
+            label: Заголовок
             type: string
           - name: description
-            label: Īss apraksts
+            label: Краткое описание
             type: text
 
   - name: announcements_en
@@ -201,23 +201,23 @@ content:
     format: json
     fields:
       - name: announcements
-        label: Upcoming events
+        label: Ближайшие мероприятия
         type: object
         list: true
         fields:
           - name: date
-            label: Date
+            label: Дата
             type: date
           - name: image
-            label: Photo
+            label: Фото
             type: image
             options:
               media: gallery
           - name: title
-            label: Title
+            label: Заголовок
             type: string
           - name: description
-            label: Short description
+            label: Краткое описание
             type: text
 
   - name: prices
