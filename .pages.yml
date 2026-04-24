@@ -161,9 +161,6 @@ content:
             type: image
             options:
               media: gallery
-          - name: image_alt
-            label: Описание фото для SEO
-            type: string
           - name: title
             label: Заголовок
             type: string

@@ -214,7 +214,7 @@ function createAnnouncementSlide(item) {
   const image = document.createElement('img');
   image.className = 'announcement-card__img';
   image.src = item.image;
-  image.alt = item.image_alt || item.title || 'Анонс мероприятия';
+  image.alt = 'Анонс мероприятия Let’s Party';
   image.loading = 'lazy';
   image.decoding = 'async';
   media.append(image);
