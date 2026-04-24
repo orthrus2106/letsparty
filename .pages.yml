@@ -128,20 +128,19 @@ content:
     path: public/content/gallery.json
     format: json
     fields:
-      - name: date
-        label: Дата
-        type: date
-      - name: image
-        label: Фото
-        type: image
-        options:
-          media: gallery
-      - name: title
-        label: Заголовок
-        type: string
-      - name: description
-        label: Краткое описание
-        type: text
+      - name: gallery
+        label: Галерея
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: Фото
+            type: image
+            options:
+              media: gallery
+          - name: caption
+            label: Подпись
+            type: string
 
   - name: announcements_ru
     label: Анонсы (RU)
@@ -175,20 +174,25 @@ content:
     path: public/content/announcements.lv.json
     format: json
     fields:
-      - name: date
-        label: Дата
-        type: date
-      - name: image
-        label: Фото
-        type: image
-        options:
-          media: gallery
-      - name: title
-        label: Заголовок
-        type: string
-      - name: description
-        label: Краткое описание
-        type: text
+      - name: announcements
+        label: Tuvākie pasākumi
+        type: object
+        list: true
+        fields:
+          - name: date
+            label: Datums
+            type: date
+          - name: image
+            label: Foto
+            type: image
+            options:
+              media: gallery
+          - name: title
+            label: Virsraksts
+            type: string
+          - name: description
+            label: Īss apraksts
+            type: text
 
   - name: announcements_en
     label: Анонсы (EN)
