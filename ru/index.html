@@ -116,6 +116,33 @@
         </div>
       </section>
 
+      <section
+        class="announcements"
+        id="announcements"
+        data-announcements
+        data-announcements-src="/content/announcements.ru.json"
+        hidden
+      >
+        <div class="container">
+          <div class="announcements__head">
+            <div>
+              <p class="announcements__label">Ближайшие встречи</p>
+              <h2 class="announcements__title">Анонсы мероприятий</h2>
+            </div>
+
+            <div class="announcements__controls" aria-label="Навигация по анонсам">
+              <button class="announcements__nav announcements__nav--prev" type="button" aria-label="Предыдущее мероприятие"></button>
+              <button class="announcements__nav announcements__nav--next" type="button" aria-label="Следующее мероприятие"></button>
+            </div>
+          </div>
+
+          <div class="announcements__slider swiper" aria-label="Ближайшие мероприятия">
+            <div class="announcements__wrapper swiper-wrapper"></div>
+            <div class="announcements__pagination swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
       <section class="formats" id="formats">
   <div class="container">
     <p class="formats__label">Что мы предлагаем?</p>
@@ -432,42 +459,42 @@
   
       <article class="review-card">
         <p class="review-card__text">“Да мне очень заходит ваш формат как вы проводите игры, <strong>стоко смеха 😂 у нас даже мама одна другого ведущего предлагала, так как цена ниже, но Эля так же, как и я — не, мы Настю хотим 😃</strong>”</p>
-        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-3.PNG" data-proof-alt="Скриншот отзыва из Telegram">
+        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-3.png" data-proof-alt="Review from social">
           Показать оригинал
         </button>
       </article>
 
       <article class="review-card">
         <p class="review-card__text">“Игра получилась супер классной 🔥🔥 Все активно играли, <strong>даже те, кто первый раз играл</strong> 😊 Обстановка была заряженной и очень живой, особенно тема с ролями прям огонь, все очень вошли в свою роль и отыгрывали на все 100! 🤣🤣 Спасибо огромное! 💗 еще придем к тебе на игру 🥰”</p>
-        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-8.PNG" data-proof-alt="Скриншот отзыва из Telegram">
+        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-8.png" data-proof-alt="Review from social">
           Показать оригинал
         </button>
       </article>
 
       <article class="review-card">
         <p class="review-card__text">“Вчера у нас был корпоратив, не смогла сразу ответить 🙏 Большое спасибо за вашу работу! <strong>Диана замечательная, нам было очень весело вместе. 🥳 Очень рада с тобой сотрудничать и приятно, что рядом всегда есть ответственные люди ❤️</strong>”</p>
-        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-5.PNG" data-proof-alt="Скриншот отзыва из Telegram">
+        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-5.png" data-proof-alt="Review from social">
           Показать оригинал
         </button>
       </article>
 
       <article class="review-card">
         <p class="review-card__text">“Спасибо, что приняли в свою теплую компанию тех неопытных, <strong>кто играет первые разы 🤗☀️</strong>”</p>
-        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-13.PNG" data-proof-alt="Скриншот отзыва из Telegram">
+        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-13.png" data-proof-alt="Review from social">
           Показать оригинал
         </button>
       </article>
 
       <article class="review-card">
         <p class="review-card__text">“Вправду <strong>с каждым разом всё круче и круче!</strong> Входить в роль мафии становится всё легче и легче 😂🔥”</p>
-        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-11.PNG" data-proof-alt="Скриншот отзыва из Telegram">
+        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-11.png" data-proof-alt="Review from social">
           Показать оригинал
         </button>
       </article>
 
       <article class="review-card">
         <p class="review-card__text">“Диана, привет! <strong>Спасибо за прекрасный, весёлый вечер!</strong> Я надеюсь, что моя шумная компания не создавала проблем в проведении мероприятия:)”</p>
-        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-14.PNG" data-proof-alt="Скриншот отзыва из Telegram">
+        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-14.png" data-proof-alt="Review from social">
           Показать оригинал
         </button>
       </article>
@@ -562,22 +589,22 @@
       
     <details class="acc-faq acc-trigger">
       <summary class="acc-faq__summary">
-        Сколько длится игра?
+        Для какого количества гостей игра в мафию?
         <span class="acc-faq__icon" aria-hidden="true">+</span>
       </summary>
       <div class="acc-faq__panel">
-        <div class="acc-faq__content"><p>Зависит от количества участников и их настроя. Мы всегда уточняем у клиентов был ли до этого опыт подобных игр и какие ожидания на этот вечер. Ведущие стараются подстроится под тайминг, если такой был обозначен.</p></div>
+        <div class="acc-faq__content"><p>От 6 до 25, заранее проговариваем этот момент и обговариваем динамику игры.</p></div>
       </div>
     </details>
   
 
     <details class="acc-faq acc-trigger">
       <summary class="acc-faq__summary">
-        Для какого количества гостей игра в мафию?
+        Сколько длится игра?
         <span class="acc-faq__icon" aria-hidden="true">+</span>
       </summary>
       <div class="acc-faq__panel">
-        <div class="acc-faq__content"><p>От 6 до 25, заранее проговариваем этот момент и обговариваем динамику игры.</p></div>
+        <div class="acc-faq__content"><p>Зависит от количества участников и их настроя. Мы всегда уточняем у клиентов был ли до этого опыт подобных игр и какие ожидания на этот вечер. Ведущие стараются подстроится под тайминг, если такой был обозначен.</p></div>
       </div>
     </details>
   

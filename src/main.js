@@ -15,6 +15,9 @@ const SELECTORS = {
   proofImg: '.proof__img',
   proofClose: '[data-proof-close]',
   proofOpen: '[data-open-proof]',
+  announcements: '[data-announcements]',
+  announcementsSlider: '.announcements__slider',
+  announcementsWrapper: '.announcements__wrapper',
   gallerySlider: '.gallery__slider',
   galleryWrapper: '#gallery-wrapper',
   galleryImage: '.gallery__slide-img',
@@ -185,6 +188,110 @@ function markPortraitImages(root) {
   });
 }
 
+function getLocalizedDate(dateValue) {
+  if (!dateValue) return '';
+
+  const date = new Date(dateValue);
+  if (Number.isNaN(date.getTime())) return dateValue;
+
+  return new Intl.DateTimeFormat('ru-RU', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  }).format(date);
+}
+
+function createAnnouncementSlide(item) {
+  const slide = document.createElement('div');
+  slide.className = 'swiper-slide';
+
+  const article = document.createElement('article');
+  article.className = 'announcement-card';
+
+  const media = document.createElement('div');
+  media.className = 'announcement-card__media';
+
+  const image = document.createElement('img');
+  image.className = 'announcement-card__img';
+  image.src = item.image;
+  image.alt = item.image_alt || item.title || 'Анонс мероприятия';
+  image.loading = 'lazy';
+  image.decoding = 'async';
+  media.append(image);
+
+  const body = document.createElement('div');
+  body.className = 'announcement-card__body';
+
+  const date = document.createElement('time');
+  date.className = 'announcement-card__date';
+  date.dateTime = item.date || '';
+  date.textContent = getLocalizedDate(item.date);
+
+  const title = document.createElement('h3');
+  title.className = 'announcement-card__title';
+  title.textContent = item.title;
+
+  const description = document.createElement('p');
+  description.className = 'announcement-card__text';
+  description.textContent = item.description;
+
+  body.append(date, title, description);
+  article.append(media, body);
+  slide.append(article);
+
+  return slide;
+}
+
+async function initAnnouncements() {
+  const section = qs(SELECTORS.announcements);
+  if (!section) return;
+
+  const sliderEl = qs(SELECTORS.announcementsSlider, section);
+  const wrapper = qs(SELECTORS.announcementsWrapper, section);
+  const contentPath = section.dataset.announcementsSrc;
+
+  if (!sliderEl || !wrapper || !contentPath) return;
+
+  try {
+    const response = await fetch(contentPath);
+    if (!response.ok) {
+      throw new Error(`Failed to load ${contentPath}`);
+    }
+
+    const data = await response.json();
+    const announcements = Array.isArray(data.announcements)
+      ? data.announcements.filter(
+          (item) => item.date && item.image && item.title && item.description,
+        )
+      : [];
+
+    if (!announcements.length) return;
+
+    wrapper.replaceChildren(...announcements.map(createAnnouncementSlide));
+    section.hidden = false;
+
+    new Swiper(sliderEl, {
+      modules: [Navigation, Pagination, A11y],
+      loop: announcements.length > 1,
+      speed: 650,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: qs('.announcements__nav--next', section),
+        prevEl: qs('.announcements__nav--prev', section),
+      },
+      pagination: {
+        el: qs('.announcements__pagination', section),
+        clickable: true,
+      },
+      a11y: true,
+      grabCursor: announcements.length > 1,
+    });
+  } catch (error) {
+    console.error('Ошибка загрузки анонсов:', error);
+  }
+}
+
 function createGallerySlides(gallery) {
   return gallery
     .map(
@@ -248,6 +355,7 @@ function initApp() {
   initAccordions();
   initProofDialog();
   initCurrentYear();
+  initAnnouncements();
   initDynamicGallery();
 }
 

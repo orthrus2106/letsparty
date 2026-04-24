@@ -116,6 +116,33 @@
         </div>
       </section>
 
+      <section
+        class="announcements"
+        id="announcements"
+        data-announcements
+        data-announcements-src="/content/announcements.ru.json"
+        hidden
+      >
+        <div class="container">
+          <div class="announcements__head">
+            <div>
+              <p class="announcements__label">Ближайшие встречи</p>
+              <h2 class="announcements__title">Анонсы мероприятий</h2>
+            </div>
+
+            <div class="announcements__controls" aria-label="Навигация по анонсам">
+              <button class="announcements__nav announcements__nav--prev" type="button" aria-label="Предыдущее мероприятие"></button>
+              <button class="announcements__nav announcements__nav--next" type="button" aria-label="Следующее мероприятие"></button>
+            </div>
+          </div>
+
+          <div class="announcements__slider swiper" aria-label="Ближайшие мероприятия">
+            <div class="announcements__wrapper swiper-wrapper"></div>
+            <div class="announcements__pagination swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
       <section class="formats" id="formats">
   <div class="container">
     <p class="formats__label">Что мы предлагаем?</p>

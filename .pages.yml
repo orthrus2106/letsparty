@@ -142,6 +142,35 @@ content:
             label: Подпись
             type: string
 
+  - name: announcements_ru
+    label: Анонсы мероприятий
+    type: file
+    path: public/content/announcements.ru.json
+    format: json
+    fields:
+      - name: announcements
+        label: Ближайшие мероприятия
+        type: object
+        list: true
+        fields:
+          - name: date
+            label: Дата
+            type: date
+          - name: image
+            label: Фото
+            type: image
+            options:
+              media: gallery
+          - name: image_alt
+            label: Описание фото для SEO
+            type: string
+          - name: title
+            label: Заголовок
+            type: string
+          - name: description
+            label: Краткое описание
+            type: text
+
   - name: prices
     label: Цены
     type: file
