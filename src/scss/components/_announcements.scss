@@ -78,6 +78,11 @@
   &__slider {
     min-width: 0;
     overflow: visible;
+
+    .swiper-slide {
+      height: auto;
+      display: flex;
+    }
   }
 
   &__slider > &__pagination.swiper-pagination {
@@ -110,6 +115,7 @@
 }
 
 .announcement-card {
+  width: 100%;
   display: grid;
   grid-template-columns: minmax(340px, 0.43fr) minmax(0, 1fr);
   align-items: stretch;
@@ -180,6 +186,8 @@
     }
 
     &__body {
+      justify-content: flex-start;
+      min-height: 210px;
       padding: $sp-5;
     }
   }
@@ -188,6 +196,7 @@
 @media (max-width: 420px) {
   .announcement-card {
     &__body {
+      min-height: 212px;
       padding: $sp-4;
     }
 
