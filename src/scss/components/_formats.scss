@@ -122,9 +122,10 @@
   &__actions {
     margin-top: auto;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    // flex-direction: column;
-    // gap: $sp-2;
+    flex-wrap: wrap;
+    gap: $sp-3;
     font-size: $fs-small;
   }
 
@@ -134,8 +135,34 @@
     text-decoration: none;
 
     display: inline-flex;
+    flex-shrink: 0;
     align-items: center;
+    justify-content: center;
     gap: $sp-2;
+    min-height: 34px;
+    padding: 7px $sp-3;
+    border: 1px solid $color-accent-border;
+    border-radius: 999px;
+    background: rgba($color-accent, 0.06);
+
+    transition:
+      background-color $transition,
+      border-color $transition,
+      color $transition,
+      box-shadow $transition,
+      transform 0.15s ease;
+
+    &:hover {
+      color: $color-text;
+      background: rgba($color-accent, 0.1);
+      border-color: rgba($color-accent, 0.52);
+      box-shadow: 0 0 12px rgba($color-accent, 0.1);
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-accent-border;
+      outline-offset: 3px;
+    }
   }
 
   &__link {
