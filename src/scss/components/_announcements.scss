@@ -81,7 +81,6 @@
 
     .swiper-slide {
       height: auto;
-      display: flex;
     }
   }
 
@@ -125,7 +124,9 @@
   background: $color-surface;
 
   &__media {
+    min-width: 0;
     aspect-ratio: 16 / 9;
+    overflow: hidden;
     background: rgba(255, 255, 255, 0.03);
   }
 
@@ -138,11 +139,12 @@
   }
 
   &__body {
+    min-width: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: $sp-3;
-    padding: $sp-5;
+    padding: $sp-5 $sp-6;
   }
 
   &__date {
@@ -167,6 +169,29 @@
     font-size: 15px;
     line-height: 1.55;
   }
+
+  &__cta {
+    align-self: flex-start;
+    margin-top: $sp-1;
+    color: $color-accent;
+    font-size: $fs-small;
+    font-weight: $fw-semibold;
+    letter-spacing: 0.04em;
+
+    &:hover {
+      text-shadow: $shadow-accent;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-accent-border;
+      outline-offset: 3px;
+      border-radius: $r-1;
+    }
+
+    &::after {
+      content: ' →';
+    }
+  }
 }
 
 @media (max-width: $tablet) {
@@ -188,7 +213,7 @@
     &__body {
       justify-content: flex-start;
       min-height: 210px;
-      padding: $sp-5;
+      padding: $sp-6;
     }
   }
 }
@@ -197,7 +222,7 @@
   .announcement-card {
     &__body {
       min-height: 212px;
-      padding: $sp-4;
+      padding: $sp-5;
     }
 
     &__date {

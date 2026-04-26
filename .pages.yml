@@ -167,6 +167,9 @@ content:
           - name: description
             label: Краткое описание
             type: text
+          - name: cta_text
+            label: Текст кнопки
+            type: string
 
   - name: announcements_lv
     label: Анонсы (LV)
@@ -193,6 +196,9 @@ content:
           - name: description
             label: Краткое описание
             type: text
+          - name: cta_text
+            label: Текст кнопки
+            type: string
 
   - name: announcements_en
     label: Анонсы (EN)
@@ -219,6 +225,9 @@ content:
           - name: description
             label: Краткое описание
             type: text
+          - name: cta_text
+            label: Текст кнопки
+            type: string
 
   - name: prices
     label: Цены

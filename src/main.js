@@ -241,6 +241,15 @@ function createAnnouncementSlide(item, options = {}) {
   description.textContent = item.description;
 
   body.append(date, title, description);
+
+  if (item.cta_text) {
+    const cta = document.createElement('a');
+    cta.className = 'announcement-card__cta';
+    cta.href = '#booking';
+    cta.textContent = item.cta_text;
+    body.append(cta);
+  }
+
   article.append(media, body);
   slide.append(article);
 

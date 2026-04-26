@@ -4,13 +4,15 @@
       "date": "2026-05-16",
       "image": "/gallery/IMG_9426.jpeg",
       "title": "Atvērtā Party Mafia spēle",
-      "description": "Vakara formāts tiem, kuri vēlas iepazīt mūsu atmosfēru, izmēģināt lomas un pavadīt vakaru dzīvā kompānijā."
+      "description": "Vakara formāts tiem, kuri vēlas iepazīt mūsu atmosfēru, izmēģināt lomas un pavadīt vakaru dzīvā kompānijā.",
+      "cta_text": "Rezervēt vietu"
     },
     {
       "date": "2026-05-30",
       "image": "/gallery/IMG_6332.jpeg",
       "title": "Bunker: Immersive Experience",
-      "description": "Imersīva tikšanās ar personīgām lomām, stāstu un izvēlēm, kur katrs dalībnieks ietekmē notikumu gaitu."
+      "description": "Imersīva tikšanās ar personīgām lomām, stāstu un izvēlēm, kur katrs dalībnieks ietekmē notikumu gaitu.",
+      "cta_text": "Uzzināt vairāk"
     }
   ]
 }
