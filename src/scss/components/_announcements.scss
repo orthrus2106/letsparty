@@ -211,6 +211,8 @@
 
   .announcement-card {
     grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    align-content: start;
     min-height: 0;
 
     &__media {
@@ -218,6 +220,7 @@
     }
 
     &__body {
+      height: 100%;
       justify-content: flex-start;
       min-height: 210px;
       padding: $sp-6;
