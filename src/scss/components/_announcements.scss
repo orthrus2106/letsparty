@@ -79,8 +79,13 @@
     min-width: 0;
     overflow: visible;
 
+    .swiper-wrapper {
+      align-items: stretch;
+    }
+
     .swiper-slide {
       height: auto;
+      display: flex;
     }
   }
 
@@ -115,6 +120,7 @@
 
 .announcement-card {
   width: 100%;
+  min-height: 230px;
   display: grid;
   grid-template-columns: minmax(340px, 0.43fr) minmax(0, 1fr);
   align-items: stretch;
@@ -168,6 +174,7 @@
     color: $color-muted;
     font-size: 15px;
     line-height: 1.55;
+    margin-bottom: auto;
   }
 
   &__cta {
