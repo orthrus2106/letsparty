@@ -122,7 +122,7 @@
   width: 100%;
   min-height: 230px;
   display: grid;
-  grid-template-columns: minmax(340px, 0.43fr) minmax(0, 1fr);
+  grid-template-columns: minmax(340px, 16fr) minmax(0, 27fr);
   align-items: stretch;
   overflow: hidden;
   border: 1px solid $color-border;
@@ -178,21 +178,42 @@
   }
 
   &__cta {
-    align-self: flex-start;
-    margin-top: $sp-1;
     color: $color-accent;
-    font-size: $fs-small;
     font-weight: $fw-semibold;
+    text-decoration: none;
+
+    display: inline-flex;
+    flex-shrink: 0;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: center;
+    gap: $sp-2;
+    min-height: 34px;
+    margin-top: $sp-1;
+    padding: 7px $sp-3;
+    border: 1px solid $color-accent-border;
+    border-radius: 999px;
+    background: rgba($color-accent, 0.06);
+    font-size: $fs-small;
     letter-spacing: 0.04em;
 
+    transition:
+      background-color $transition,
+      border-color $transition,
+      color $transition,
+      box-shadow $transition,
+      transform 0.15s ease;
+
     &:hover {
-      text-shadow: $shadow-accent;
+      color: $color-text;
+      background: rgba($color-accent, 0.1);
+      border-color: rgba($color-accent, 0.52);
+      box-shadow: 0 0 12px rgba($color-accent, 0.1);
     }
 
     &:focus-visible {
       outline: 2px solid $color-accent-border;
       outline-offset: 3px;
-      border-radius: $r-1;
     }
 
     &::after {
