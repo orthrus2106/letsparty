@@ -193,7 +193,31 @@
         </div>
       </article>
 
-      <article class="format-card">
+      <article class="format-card format-card--featured format-card--music">
+        <span class="format-card__wordmark" aria-hidden="true">BINGO!</span>
+        <div class="format-card__equalizer" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="format-card__badge format-card__badge--featured">
+          {{prices.music_bingo}} € / 1,5 stundas
+        </div>
+        <h3 class="format-card__title">Muzikālais bingo</h3>
+        <p class="format-card__hook">
+          Hiti ciparu vietā. Dejas klusuma vietā. Un īsts “BINGO!” pašā ballītes vidū.
+        </p>
+        <ul class="format-card__list">
+          <li>50 labi zināmi mūzikas hiti</li>
+          <li>Individuālas bingo kartītes katram viesim</li>
+          <li>Vadītāja, mikrofoni un skaņas sistēma</li>
+          <li>Līdz 30 dalībniekiem</li>
+        </ul>
+        <div class="format-card__actions">
+          <a href="#format-music-bingo" class="format-card__link" data-acc="format-music-bingo">Uzzināt vairāk →</a>
+          <a href="#booking" class="format-card__cta">Rezervēt datumu →</a>
+        </div>
+      </article>
+
+      <article class="format-card format-card--half">
         <div class="format-card__badge">no {{prices.classic_mafia}} € / stundā</div>
         <h3 class="format-card__title">Klasiskā mafija</h3>
         <p class="format-card__hook">Pazīstams formāts jebkurai kompānijai</p>
@@ -214,7 +238,7 @@
         
       </article>
 
-      <article class="format-card">
+      <article class="format-card format-card--half">
         <div class="format-card__badge">no {{prices.bunker}} € / stundā</div>
         <h3 class="format-card__title">Bunkurs</h3>
         <p class="format-card__hook">Spēle uz loģiku un diskusijām</p>
@@ -276,7 +300,8 @@
         </summary>
         <div class="acc-details__panel">
           <div class="acc-details__content">
-            <p>{{formats.party_mafia.description}}</p>
+            <div class="acc-details__rich-text">{{formats.party_mafia.description_html}}</div>
+            {{formats.party_mafia.tip_html}}
             <a href="#booking" class="acc-details__cta">
   Rezervēt datumu →
 </a>
@@ -291,7 +316,24 @@
         </summary>
         <div class="acc-details__panel">
           <div class="acc-details__content">
-            <p>{{formats.bunker_immersive.description}}</p>
+            <div class="acc-details__rich-text">{{formats.bunker_immersive.description_html}}</div>
+            {{formats.bunker_immersive.tip_html}}
+            <a href="#booking" class="acc-details__cta">
+  Rezervēt datumu →
+</a>
+          </div>
+        </div>
+      </details>
+
+      <details class="acc-details acc-trigger" id="format-music-bingo">
+        <summary class="acc-details__summary">
+          {{formats.music_bingo.title}}
+          <span class="acc-details__icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="acc-details__panel">
+          <div class="acc-details__content">
+            <div class="acc-details__rich-text">{{formats.music_bingo.description_html}}</div>
+            {{formats.music_bingo.tip_html}}
             <a href="#booking" class="acc-details__cta">
   Rezervēt datumu →
 </a>
@@ -306,7 +348,8 @@
         </summary>
         <div class="acc-details__panel">
           <div class="acc-details__content">
-            <p>{{formats.classic_mafia.description}}</p>
+            <div class="acc-details__rich-text">{{formats.classic_mafia.description_html}}</div>
+            {{formats.classic_mafia.tip_html}}
             <a href="#booking" class="acc-details__cta">
   Rezervēt datumu →
 </a>
@@ -321,7 +364,8 @@
         </summary>
         <div class="acc-details__panel">
           <div class="acc-details__content">
-            <p>{{formats.bunker.description}}</p>
+            <div class="acc-details__rich-text">{{formats.bunker.description_html}}</div>
+            {{formats.bunker.tip_html}}
             <a href="#booking" class="acc-details__cta">
   Rezervēt datumu →
 </a>

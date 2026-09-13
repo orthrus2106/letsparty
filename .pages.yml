@@ -19,6 +19,21 @@ content:
         label: Описания форматов (Аккордеоны)
         type: object
         fields:
+          - name: music_bingo
+            label: Музыкальное бинго
+            type: object
+            fields:
+              - name: title
+                label: Заголовок
+                type: string
+              - name: description
+                label: Описание — выделите текст, чтобы открыть форматирование
+                type: rich-text
+                options:
+                  format: html
+              - name: tip
+                label: Акцентная заметка (необязательно)
+                type: text
           - name: party_mafia
             label: Party Mafia
             type: object
@@ -27,7 +42,12 @@ content:
                 label: Заголовок
                 type: string
               - name: description
-                label: Описание
+                label: Описание — выделите текст, чтобы открыть форматирование
+                type: rich-text
+                options:
+                  format: html
+              - name: tip
+                label: Акцентная заметка (необязательно)
                 type: text
           - name: bunker_immersive
             label: Bunker Immersive
@@ -37,7 +57,12 @@ content:
                 label: Заголовок
                 type: string
               - name: description
-                label: Описание
+                label: Описание — выделите текст, чтобы открыть форматирование
+                type: rich-text
+                options:
+                  format: html
+              - name: tip
+                label: Акцентная заметка (необязательно)
                 type: text
           - name: classic_mafia
             label: Classic Mafia
@@ -47,7 +72,12 @@ content:
                 label: Заголовок
                 type: string
               - name: description
-                label: Описание
+                label: Описание — выделите текст, чтобы открыть форматирование
+                type: rich-text
+                options:
+                  format: html
+              - name: tip
+                label: Акцентная заметка (необязательно)
                 type: text
           - name: bunker
             label: Bunker Classic
@@ -57,7 +87,12 @@ content:
                 label: Заголовок
                 type: string
               - name: description
-                label: Описание
+                label: Описание — выделите текст, чтобы открыть форматирование
+                type: rich-text
+                options:
+                  format: html
+              - name: tip
+                label: Акцентная заметка (необязательно)
                 type: text
       - name: faq
         label: FAQ
@@ -244,6 +279,9 @@ content:
             type: number
           - name: bunker_immersive
             label: Bunker Immersive
+            type: number
+          - name: music_bingo
+            label: Music Bingo
             type: number
           - name: classic_mafia
             label: Classic Mafia

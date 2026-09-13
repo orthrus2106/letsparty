@@ -45,6 +45,29 @@ function replaceObjectPlaceholders(html, prefix, obj) {
   return html;
 }
 
+function escapeHtml(value = '') {
+  return String(value)
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#039;');
+}
+
+function renderRichText(value) {
+  if (typeof value !== 'string' || !value.trim()) return '';
+
+  const content = value.trim();
+  const containsHtml = /<\/?[a-z][\s\S]*>/i.test(content);
+  return containsHtml ? content : `<p>${escapeHtml(content)}</p>`;
+}
+
+function renderTip(value) {
+  if (typeof value !== 'string' || !value.trim()) return '';
+
+  return `<aside class="acc-details__tip"><p>${escapeHtml(value.trim())}</p></aside>`;
+}
+
 pages.forEach((page) => {
   const templatePath = path.join(__dirname, page.template);
   const outputPath = path.join(__dirname, page.output);
@@ -87,6 +110,8 @@ pages.forEach((page) => {
       Object.keys(data.formats).forEach((key) => {
         const titlePlaceholder = `{{formats.${key}.title}}`;
         const descPlaceholder = `{{formats.${key}.description}}`;
+        const richDescPlaceholder = `{{formats.${key}.description_html}}`;
+        const tipPlaceholder = `{{formats.${key}.tip_html}}`;
 
         if (html.includes(titlePlaceholder)) {
           html = html.split(titlePlaceholder).join(data.formats[key].title);
@@ -96,6 +121,19 @@ pages.forEach((page) => {
             .split(descPlaceholder)
             .join(data.formats[key].description);
         }
+
+        if (html.includes(richDescPlaceholder)) {
+          html = html
+            .split(richDescPlaceholder)
+            .join(renderRichText(data.formats[key].description));
+        }
+
+        if (html.includes(tipPlaceholder)) {
+          html = html
+            .split(tipPlaceholder)
+            .join(renderTip(data.formats[key].tip));
+        }
+
       });
     }
 
@@ -151,6 +189,9 @@ pages.forEach((page) => {
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
+
+    // Optional CMS fields can leave whitespace-only lines in generated HTML.
+    html = html.replace(/[ \t]+$/gm, '');
 
     fs.writeFileSync(outputPath, html);
     console.log(`✅ Сгенерирован файл: ${page.output}`);

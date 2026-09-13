@@ -58,6 +58,11 @@
     }
   ],
   "formats": {
+    "music_bingo": {
+      "title": "Music Bingo",
+      "description": "<p>Music Bingo is a game, karaoke, and a party all in one. The host plays well-known hits, and guests find them on their cards and mark the matches.</p><p>You do not need to be a music expert: victory depends on luck, excitement, and being the first to shout <strong>“BINGO!”</strong> This format is perfect for birthdays, corporate events, bachelorette parties, or any group you want to bring together and energize quickly.</p><p><strong>How the game works</strong></p><ol><li>Each participant receives a Music Bingo card.</li><li>The host plays clips from well-known songs.</li><li>Guests find the songs on their cards and mark the matches.</li><li>The first participant to complete the required combination shouts <strong>“BINGO!”</strong> and wins a prize.</li></ol><p><strong>The price includes:</strong> the host, a program of 50 hit songs, a sound system, microphones, individual bingo cards, and all necessary game props.</p><p><strong>Don’t want the party to end?</strong> After Music Bingo, you can continue the evening with karaoke.</p>",
+      "tip": "For groups larger than 30, we provide an individual quote. Prizes are selected together with the client and paid for separately."
+    },
     "party_mafia": {
       "title": "Party Mafia — our headliner",
       "description": "Party Mafia is a unique format, a fresh take on the familiar \"Mafia\". Not just a game, but a full program for your holiday. Participants are given the opportunity to show their acting skills, reveal themselves from a new side, and snatch victory through their knowledge, agility, reaction, and wit. It's a format with a lot of emotion and dynamics, where guests loosen up and get involved in the process. Suitable for groups that want drive, movement, and vivid memories."

@@ -193,7 +193,31 @@
         </div>
       </article>
 
-      <article class="format-card">
+      <article class="format-card format-card--featured format-card--music">
+        <span class="format-card__wordmark" aria-hidden="true">BINGO!</span>
+        <div class="format-card__equalizer" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="format-card__badge format-card__badge--featured">
+          {{prices.music_bingo}} € / 1.5 hours
+        </div>
+        <h3 class="format-card__title">Music Bingo</h3>
+        <p class="format-card__hook">
+          Hits instead of numbers. Dancing instead of silence. And a real “BINGO!” in the middle of the party.
+        </p>
+        <ul class="format-card__list">
+          <li>50 well-known hit songs</li>
+          <li>Individual bingo cards for every guest</li>
+          <li>Host, microphones, and sound system</li>
+          <li>Up to 30 participants</li>
+        </ul>
+        <div class="format-card__actions">
+          <a href="#format-music-bingo" class="format-card__link" data-acc="format-music-bingo">Read more →</a>
+          <a href="#booking" class="format-card__cta">Reserve your date →</a>
+        </div>
+      </article>
+
+      <article class="format-card format-card--half">
         <div class="format-card__badge">from {{prices.classic_mafia}} € / hour</div>
         <h3 class="format-card__title">Classic Mafia</h3>
         <p class="format-card__hook">A familiar format for any group</p>
@@ -214,7 +238,7 @@
         
       </article>
 
-      <article class="format-card">
+      <article class="format-card format-card--half">
         <div class="format-card__badge">from {{prices.bunker}} € / hour</div>
         <h3 class="format-card__title">Bunker</h3>
         <p class="format-card__hook">A game of logic and discussion</p>
@@ -276,7 +300,8 @@
         </summary>
         <div class="acc-details__panel">
           <div class="acc-details__content">
-            <p>{{formats.party_mafia.description}}</p>
+            <div class="acc-details__rich-text">{{formats.party_mafia.description_html}}</div>
+            {{formats.party_mafia.tip_html}}
             <a href="#booking" class="acc-details__cta">
   Reserve your date →
 </a>
@@ -291,7 +316,24 @@
         </summary>
         <div class="acc-details__panel">
           <div class="acc-details__content">
-            <p>{{formats.bunker_immersive.description}}</p>
+            <div class="acc-details__rich-text">{{formats.bunker_immersive.description_html}}</div>
+            {{formats.bunker_immersive.tip_html}}
+            <a href="#booking" class="acc-details__cta">
+  Reserve your date →
+</a>
+          </div>
+        </div>
+      </details>
+
+      <details class="acc-details acc-trigger" id="format-music-bingo">
+        <summary class="acc-details__summary">
+          {{formats.music_bingo.title}}
+          <span class="acc-details__icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="acc-details__panel">
+          <div class="acc-details__content">
+            <div class="acc-details__rich-text">{{formats.music_bingo.description_html}}</div>
+            {{formats.music_bingo.tip_html}}
             <a href="#booking" class="acc-details__cta">
   Reserve your date →
 </a>
@@ -306,7 +348,8 @@
         </summary>
         <div class="acc-details__panel">
           <div class="acc-details__content">
-            <p>{{formats.classic_mafia.description}}</p>
+            <div class="acc-details__rich-text">{{formats.classic_mafia.description_html}}</div>
+            {{formats.classic_mafia.tip_html}}
             <a href="#booking" class="acc-details__cta">
   Reserve your date →
 </a>
@@ -321,7 +364,8 @@
         </summary>
         <div class="acc-details__panel">
           <div class="acc-details__content">
-            <p>{{formats.bunker.description}}</p>
+            <div class="acc-details__rich-text">{{formats.bunker.description_html}}</div>
+            {{formats.bunker.tip_html}}
             <a href="#booking" class="acc-details__cta">
   Reserve your date →
 </a>

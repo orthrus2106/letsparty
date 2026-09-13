@@ -58,6 +58,11 @@
     }
   ],
   "formats": {
+    "music_bingo": {
+      "title": "Muzikālais bingo",
+      "description": "<p>Muzikālais bingo ir spēle, karaoke un ballīte vienā formātā. Vadītāja atskaņo labi zināmus hitus, viesi tos atrod savās kartītēs un atzīmē sakritības.</p><p>Nav jābūt mūzikas ekspertam: uzvaru nosaka veiksme, azarts un tas, kurš pirmais izsauc <strong>“BINGO!”</strong> Formāts lieliski piemērots dzimšanas dienai, korporatīvam pasākumam, vecmeitu ballītei vai jebkurai kompānijai, kuru vēlaties ātri saliedēt un iekustināt.</p><p><strong>Kā notiek spēle</strong></p><ol><li>Katrs dalībnieks saņem muzikālā bingo kartīti.</li><li>Vadītāja atskaņo fragmentus no labi zināmām dziesmām.</li><li>Viesi atrod dziesmas savās kartītēs un atzīmē sakritības.</li><li>Pirmais dalībnieks, kurš savāc nepieciešamo kombināciju, izsauc <strong>“BINGO!”</strong> un saņem balvu.</li></ol><p><strong>Cenā iekļauts:</strong> vadītāja, 50 muzikālo hitu programma, skaņas sistēma, mikrofoni, individuālas bingo kartītes un visi spēlei nepieciešamie rekvizīti.</p><p><strong>Nevēlaties beigt ballīti?</strong> Pēc muzikālā bingo vakaru var turpināt ar karaoke.</p>",
+      "tip": "Kompānijām, kurās ir vairāk nekā 30 cilvēku, sagatavosim individuālu piedāvājumu. Balvas izvēlamies kopā ar klientu, un tās tiek apmaksātas atsevišķi."
+    },
     "party_mafia": {
       "title": "Party Mafia — mūsu hita formāts",
       "description": "Party Mafia ir unikāls formāts, jauns skatījums uz ierasto \"mafiju\". Tā nav tikai spēle, bet pilnvērtīga programma jūsu svētkiem. Dalībniekiem tiek dota iespēja izpaust savas aktierprasmes, parādīt sevi no jaunas puses un izcīnīt uzvaru, pateicoties savām zināšanām, veiklībai, reakcijai un atjautībai. Tas ir formāts ar daudz emocijām un dinamiku, kur viesi atbrīvojas un iesaistās procesā. Piemērots kompānijām, kuras vēlas \"draivu\", kustību un spilgtas atmiņas."

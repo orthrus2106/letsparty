@@ -193,7 +193,31 @@
         </div>
       </article>
 
-      <article class="format-card">
+      <article class="format-card format-card--featured format-card--music">
+        <span class="format-card__wordmark" aria-hidden="true">BINGO!</span>
+        <div class="format-card__equalizer" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="format-card__badge format-card__badge--featured">
+          {{prices.music_bingo}} € / 1,5 часа
+        </div>
+        <h3 class="format-card__title">Музыкальное бинго</h3>
+        <p class="format-card__hook">
+          Хиты вместо цифр. Танцы вместо тишины. И настоящее «БИНГО!» посреди вечеринки.
+        </p>
+        <ul class="format-card__list">
+          <li>50 знакомых музыкальных хитов</li>
+          <li>Индивидуальные карточки для гостей</li>
+          <li>Ведущая, микрофоны и музыкальная колонка</li>
+          <li>До 30 участников</li>
+        </ul>
+        <div class="format-card__actions">
+          <a href="#format-music-bingo" class="format-card__link" data-acc="format-music-bingo">Подробнее →</a>
+          <a href="#booking" class="format-card__cta">Забронировать дату →</a>
+        </div>
+      </article>
+
+      <article class="format-card format-card--half">
         <div class="format-card__badge">от {{prices.classic_mafia}} € / час</div>
         <h3 class="format-card__title">Классическая мафия</h3>
         <p class="format-card__hook">Знакомый формат для любой компании</p>
@@ -214,7 +238,7 @@
         
       </article>
 
-      <article class="format-card">
+      <article class="format-card format-card--half">
         <div class="format-card__badge">от {{prices.bunker}} € / час</div>
         <h3 class="format-card__title">Бункер</h3>
         <p class="format-card__hook">Игра на логику и обсуждение</p>
@@ -268,7 +292,6 @@
 <section class="format-details" id="formats-details">
   <div class="container">
     <div class="accordion accordion--details" id="formats-accordion">
-      
       <details class="acc-details acc-trigger" id="format-author">
         <summary class="acc-details__summary">
           {{formats.party_mafia.title}}
@@ -276,7 +299,8 @@
         </summary>
         <div class="acc-details__panel">
           <div class="acc-details__content">
-            <p>{{formats.party_mafia.description}}</p>
+            <div class="acc-details__rich-text">{{formats.party_mafia.description_html}}</div>
+            {{formats.party_mafia.tip_html}}
             <a href="#booking" class="acc-details__cta">
   Забронировать дату →
 </a>
@@ -291,7 +315,24 @@
         </summary>
         <div class="acc-details__panel">
           <div class="acc-details__content">
-            <p>{{formats.bunker_immersive.description}}</p>
+            <div class="acc-details__rich-text">{{formats.bunker_immersive.description_html}}</div>
+            {{formats.bunker_immersive.tip_html}}
+            <a href="#booking" class="acc-details__cta">
+  Забронировать дату →
+</a>
+          </div>
+        </div>
+      </details>
+
+      <details class="acc-details acc-trigger" id="format-music-bingo">
+        <summary class="acc-details__summary">
+          {{formats.music_bingo.title}}
+          <span class="acc-details__icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="acc-details__panel">
+          <div class="acc-details__content">
+            <div class="acc-details__rich-text">{{formats.music_bingo.description_html}}</div>
+            {{formats.music_bingo.tip_html}}
             <a href="#booking" class="acc-details__cta">
   Забронировать дату →
 </a>
@@ -306,7 +347,8 @@
         </summary>
         <div class="acc-details__panel">
           <div class="acc-details__content">
-            <p>{{formats.classic_mafia.description}}</p>
+            <div class="acc-details__rich-text">{{formats.classic_mafia.description_html}}</div>
+            {{formats.classic_mafia.tip_html}}
             <a href="#booking" class="acc-details__cta">
   Забронировать дату →
 </a>
@@ -321,7 +363,8 @@
         </summary>
         <div class="acc-details__panel">
           <div class="acc-details__content">
-            <p>{{formats.bunker.description}}</p>
+            <div class="acc-details__rich-text">{{formats.bunker.description_html}}</div>
+            {{formats.bunker.tip_html}}
             <a href="#booking" class="acc-details__cta">
   Забронировать дату →
 </a>
